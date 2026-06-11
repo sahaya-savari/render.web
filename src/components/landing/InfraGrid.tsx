@@ -1,98 +1,114 @@
 import { motion } from "framer-motion";
-import {
-  Terminal,
-  FileCode2,
-  Layers,
-  HardDrive,
-  Zap,
-  RadioTower,
-  Globe,
-  ShieldCheck,
-} from "lucide-react";
 
-const items = [
+const leftColumnItems = [
   {
-    icon: Terminal,
-    title: "Native language runtimes",
-    body: "High-performance environments for nearly every popular framework.",
-  },
-  {
-    icon: FileCode2,
     title: "Infrastructure as code",
     body: "Define, deploy, and version your entire architecture with a single YAML file.",
   },
   {
-    icon: Layers,
+    title: "Native language runtimes",
+    body: "High-performance environments for nearly every popular framework.",
+  },
+  {
     title: "Isolated environments",
     body: "Prevent non-production environments from accessing production services.",
   },
   {
-    icon: HardDrive,
     title: "Object storage",
-    badge: "Coming soon",
     body: "Store and retrieve files from your services with lightweight SDKs.",
   },
   {
-    icon: Zap,
     title: "Redis-compatible Key Value",
     body: "Low-latency in-memory storage ideal for shared caches and job queues.",
   },
   {
-    icon: RadioTower,
     title: "WebSockets",
     body: "Build real-time features with long-lived, bi-directional streaming.",
   },
+];
+
+const rightColumnItems = [
   {
-    icon: Globe,
-    title: "Edge caching",
-    body: "Serve static assets faster with caching powered by a global CDN.",
+    title: "Managed services",
+    body: "Deploy databases and other stateful services with one click.",
   },
   {
-    icon: ShieldCheck,
-    title: "Fully-managed TLS",
-    body: "Free TLS certificates for every domain, including wildcards.",
+    title: "Background workers",
+    body: "Run asynchronous processing and queue consumers.",
+  },
+  {
+    title: "Cron jobs",
+    body: "Schedule tasks to run on a timer with exact precision.",
+  },
+  {
+    title: "Persistent disks",
+    body: "Attach durable block storage to any service.",
+  },
+  {
+    title: "Private networking",
+    body: "Secure, isolated network for inter-service communication.",
+  },
+  {
+    title: "Edge caching",
+    body: "Serve static assets quickly using a global CDN.",
   },
 ];
 
 export function InfraGrid() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
+    <section className="mx-auto max-w-[1200px] px-4 py-24 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        className="mb-16"
       >
-        <h2 className="max-w-2xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+        <h2 className="font-display text-[48px] font-bold tracking-tight text-white leading-[1.1] max-w-[600px]">
           Intuitive infrastructure, designed for builders
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
+        <p className="mt-4 text-[#a1a1aa] text-[18px]">
           Ship software faster with integrated primitives that just work.
         </p>
       </motion.div>
 
-      <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((item, i) => (
-          <motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: (i % 4) * 0.08 }}
-          >
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 ring-1 ring-primary/25">
-              <item.icon className="h-5 w-5 text-primary-glow" />
-            </span>
-            <h3 className="mt-4 flex flex-wrap items-center gap-2 font-display text-base font-semibold">
-              {item.title}
-              {item.badge && (
-                <span className="rounded-full bg-accent px-2 py-0.5 text-[10px] font-medium text-accent-foreground">
-                  {item.badge}
-                </span>
-              )}
-            </h3>
-            <p className="mt-2 text-sm text-muted-foreground">{item.body}</p>
-          </motion.div>
-        ))}
+      <div className="grid gap-x-16 gap-y-12 sm:grid-cols-2">
+        <div className="space-y-12">
+          {leftColumnItems.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+            >
+              <h3 className="font-display text-[20px] font-bold text-[#e2e8f0]">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-[15px] text-[#8b949e] leading-relaxed">
+                {item.body}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+        
+        <div className="space-y-12">
+          {rightColumnItems.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: (i + 1) * 0.05 }}
+            >
+              <h3 className="font-display text-[20px] font-bold text-[#e2e8f0]">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-[15px] text-[#8b949e] leading-relaxed">
+                {item.body}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,37 +1,11 @@
 const row1 = [
-  "Node.js",
-  "Python",
-  "Go",
-  "Rust",
-  "Ruby",
-  "Elixir",
-  "PHP",
-  "Java",
-  "Scala",
-  "Deno",
-  "Bun",
-  "Docker",
-];
-
-const row2 = [
-  "Next.js",
-  "Django",
-  "Rails",
-  "Laravel",
-  "FastAPI",
-  "Express",
-  "Flask",
-  "Spring",
-  "Phoenix",
-  "Astro",
-  "Remix",
-  "SvelteKit",
+  "React", "Next.js", "Node", "Go", "Vue", "Python", "Ruby", "Docker", "Svelte", "Remix", "Nuxt", "Nest"
 ];
 
 function Chip({ label }: { label: string }) {
   return (
-    <span className="mx-2 flex shrink-0 items-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-medium text-muted-foreground">
-      <span className="flex h-6 w-6 items-center justify-center rounded-md bg-primary/15 font-mono text-[10px] font-semibold text-primary-glow">
+    <span className="mx-2 flex shrink-0 items-center gap-3 rounded-lg bg-[#2a0e4e]/80 px-6 py-3.5 text-[15px] font-semibold text-white shadow-xl backdrop-blur-md border border-white/10 hover:bg-[#341261] transition-all cursor-default">
+      <span className="flex h-8 w-8 items-center justify-center rounded bg-black/40 font-mono text-[11px] font-bold text-white/90 shadow-inner border border-white/5">
         {label.slice(0, 2).toUpperCase()}
       </span>
       {label}
@@ -42,7 +16,7 @@ function Chip({ label }: { label: string }) {
 function MarqueeRow({ items, reverse }: { items: string[]; reverse?: boolean }) {
   const doubled = [...items, ...items];
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden py-3">
       <div
         className={`flex w-max ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
       >
@@ -56,28 +30,35 @@ function MarqueeRow({ items, reverse }: { items: string[]; reverse?: boolean }) 
 
 export function StackMarquee() {
   return (
-    <section className="border-y border-border bg-card/30 py-20">
-      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6">
-        <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-          Whatever your stack, it runs on{" "}
-          <span className="text-gradient-primary">Render</span>.
+    <section className="relative overflow-hidden py-28 mt-12 mb-12">
+      {/* Deep vibrant purple gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#200045] via-[#460099] to-[#200045] opacity-100"></div>
+      
+      {/* Subtle overlay glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_70%)]"></div>
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4 text-center sm:px-6">
+        <h2 className="font-display text-[40px] font-bold tracking-tight text-white sm:text-[48px] max-w-3xl mx-auto leading-[1.1]">
+          Whatever your stack is,<br/>we support it out of the box
         </h2>
-        <a
-          href="#"
-          className="mt-6 inline-block rounded-lg border border-border bg-secondary/40 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
-        >
-          View Templates
-        </a>
+        <div className="mt-10">
+          <a
+            href="#"
+            className="inline-block rounded shadow-[0_0_20px_rgba(255,255,255,0.3)] bg-white px-8 py-3.5 text-[15px] font-bold text-black transition-all hover:scale-105"
+          >
+            Deploy a project
+          </a>
+        </div>
       </div>
+      
       <div
-        className="mt-12 space-y-4"
+        className="relative z-10 mt-20"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
         }}
       >
         <MarqueeRow items={row1} />
-        <MarqueeRow items={row2} reverse />
       </div>
     </section>
   );
