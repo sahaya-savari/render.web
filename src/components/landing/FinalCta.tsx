@@ -40,9 +40,7 @@ export function FinalCta() {
         >
           Start building with <span className="text-gradient-primary">Render</span>
         </motion.h2>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Zero ops, zero surprises.
-        </p>
+        <p className="mt-4 text-lg text-muted-foreground">Zero ops, zero surprises.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a
             href="#"

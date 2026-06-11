@@ -24,7 +24,9 @@ function ServicePicker() {
             }`}
           >
             <div className="flex items-center gap-3">
-              <span className={`w-3 h-3 rounded-sm ${s.active ? 'bg-[#8a4baf]' : 'bg-[#30363d]'}`}></span>
+              <span
+                className={`w-3 h-3 rounded-sm ${s.active ? "bg-[#8a4baf]" : "bg-[#30363d]"}`}
+              ></span>
               <span>{s.label}</span>
             </div>
             {s.active && <Check className="h-4 w-4 text-[#8a4baf]" />}
@@ -41,7 +43,9 @@ function ConnectRepoForm() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
       <div className="space-y-4">
         <div>
-          <label className="block text-[12px] text-[#8b949e] mb-1.5 font-semibold">Repository</label>
+          <label className="block text-[12px] text-[#8b949e] mb-1.5 font-semibold">
+            Repository
+          </label>
           <div className="flex items-center justify-between rounded border border-[#30363d] bg-[#010409] px-3 py-2 text-[13px] text-[#c9d1d9]">
             render-examples/fastapi <ChevronDown className="h-4 w-4 text-[#8b949e]" />
           </div>
@@ -141,8 +145,12 @@ export function StepsSection() {
             <span className="flex h-8 w-8 items-center justify-center rounded bg-[#2d1b3d] text-[14px] font-bold text-[#d49bff] mb-6">
               {step.n}
             </span>
-            <h3 className="font-display text-[22px] font-bold text-white leading-snug pr-4">{step.title}</h3>
-            <p className="mt-3 text-[14px] text-[#8b949e] leading-relaxed flex-grow pr-4">{step.body}</p>
+            <h3 className="font-display text-[22px] font-bold text-white leading-snug pr-4">
+              {step.title}
+            </h3>
+            <p className="mt-3 text-[14px] text-[#8b949e] leading-relaxed flex-grow pr-4">
+              {step.body}
+            </p>
             <div className="mt-8 pointer-events-none">{step.mock}</div>
           </motion.div>
         ))}

@@ -9,7 +9,7 @@ export function Hero() {
         className="pointer-events-none absolute left-1/2 top-[20%] z-0 h-[800px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.15] blur-[120px]"
         style={{ background: "radial-gradient(circle, #c88dfc 0%, transparent 70%)" }}
       />
-      
+
       <div className="relative z-10 mx-auto max-w-[1000px] px-4 sm:px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -61,28 +61,36 @@ export function Hero() {
           <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-6 max-w-[800px] mx-auto">
             {/* Scattered logos mimicking exactly the screenshot blocks */}
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Code2 className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">Node.js</span>
+              <Code2 className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">Node.js</span>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Terminal className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">Python</span>
+              <Terminal className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">Python</span>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Box className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">Go</span>
+              <Box className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">Go</span>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Database className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">Rust</span>
+              <Database className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">Rust</span>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Layers className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">Ruby</span>
+              <Layers className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">Ruby</span>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Cpu className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">Elixir</span>
+              <Cpu className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">Elixir</span>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Code2 className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">PHP</span>
+              <Code2 className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">PHP</span>
             </div>
             <div className="flex items-center gap-2 rounded-full border border-white/10 bg-[#111] px-5 py-2 hover:bg-[#1a1a1a] transition-colors">
-              <Github className="h-4 w-4 text-white" /> <span className="text-[14px] font-semibold text-white">Docker</span>
+              <Github className="h-4 w-4 text-white" />{" "}
+              <span className="text-[14px] font-semibold text-white">Docker</span>
             </div>
           </div>
         </motion.div>

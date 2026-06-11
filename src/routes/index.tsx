@@ -24,8 +24,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Render — Cloud Application Platform" },
       {
         property: "og:description",
-        content:
-          "Build, deploy, and scale apps, APIs, and AI agents with zero ops.",
+        content: "Build, deploy, and scale apps, APIs, and AI agents with zero ops.",
       },
     ],
   }),

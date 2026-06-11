@@ -5,7 +5,5 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-  plugins: [
-    tailwindcss()
-  ],
+  plugins: [tailwindcss()],
 });

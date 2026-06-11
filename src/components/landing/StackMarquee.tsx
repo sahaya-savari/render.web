@@ -1,5 +1,16 @@
 const row1 = [
-  "React", "Next.js", "Node", "Go", "Vue", "Python", "Ruby", "Docker", "Svelte", "Remix", "Nuxt", "Nest"
+  "React",
+  "Next.js",
+  "Node",
+  "Go",
+  "Vue",
+  "Python",
+  "Ruby",
+  "Docker",
+  "Svelte",
+  "Remix",
+  "Nuxt",
+  "Nest",
 ];
 
 function Chip({ label }: { label: string }) {
@@ -17,9 +28,7 @@ function MarqueeRow({ items, reverse }: { items: string[]; reverse?: boolean }) 
   const doubled = [...items, ...items];
   return (
     <div className="relative overflow-hidden py-3">
-      <div
-        className={`flex w-max ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
-      >
+      <div className={`flex w-max ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}>
         {doubled.map((item, i) => (
           <Chip key={`${item}-${i}`} label={item} />
         ))}
@@ -33,13 +42,15 @@ export function StackMarquee() {
     <section className="relative overflow-hidden py-28 mt-12 mb-12">
       {/* Deep vibrant purple gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#200045] via-[#460099] to-[#200045] opacity-100"></div>
-      
+
       {/* Subtle overlay glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_70%)]"></div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 text-center sm:px-6">
         <h2 className="font-display text-[40px] font-bold tracking-tight text-white sm:text-[48px] max-w-3xl mx-auto leading-[1.1]">
-          Whatever your stack is,<br/>we support it out of the box
+          Whatever your stack is,
+          <br />
+          we support it out of the box
         </h2>
         <div className="mt-10">
           <a
@@ -50,12 +61,11 @@ export function StackMarquee() {
           </a>
         </div>
       </div>
-      
+
       <div
         className="relative z-10 mt-20"
         style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+          maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
         }}
       >
         <MarqueeRow items={row1} />

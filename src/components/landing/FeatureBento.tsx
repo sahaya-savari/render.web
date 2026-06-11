@@ -20,7 +20,9 @@ function PreviewsMock() {
           </p>
           <div className="flex items-center gap-2 rounded border border-[#30363d] p-2 bg-[#0d1117]">
             <CheckCircle2 className="h-4 w-4 text-[#238636]" />
-            <a href="#" className="text-[#58a6ff] hover:underline block truncate text-[13px]">https://preview-xyz-pr-42.onrender.com</a>
+            <a href="#" className="text-[#58a6ff] hover:underline block truncate text-[13px]">
+              https://preview-xyz-pr-42.onrender.com
+            </a>
           </div>
         </div>
       </div>
@@ -51,7 +53,8 @@ export function FeatureBento() {
               Built-in CI/CD and pull request previews
             </h3>
             <p className="text-[#a1a1aa] text-[16px] leading-relaxed">
-              Automatic builds and deployments on every push. Review changes in isolated environments before merging.
+              Automatic builds and deployments on every push. Review changes in isolated
+              environments before merging.
             </p>
             <div className="mt-4 inline-flex items-center gap-1 text-[14px] font-semibold text-[#818cf8] hover:text-[#a5b4fc] transition-colors cursor-pointer">
               Explore CI/CD <span aria-hidden="true">&rarr;</span>

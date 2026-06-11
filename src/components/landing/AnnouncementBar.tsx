@@ -5,10 +5,7 @@ export function AnnouncementBar() {
         Join us for localhost, our first conference, in San Francisco on June 18
       </span>
       <span className="sm:hidden">localhost conf · SF · June 18</span>
-      <a
-        href="#"
-        className="underline underline-offset-2 transition-opacity hover:opacity-80"
-      >
+      <a href="#" className="underline underline-offset-2 transition-opacity hover:opacity-80">
         Get your ticket
       </a>
     </div>
