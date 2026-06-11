@@ -1,12 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  Network,
-  Shield,
-  BadgeCheck,
-  ScrollText,
-  Lock,
-  Users,
-} from "lucide-react";
+import { Network, Shield, BadgeCheck, ScrollText, Lock, Users } from "lucide-react";
 
 const items = [
   {
@@ -53,9 +46,7 @@ export function SecuritySection() {
           <h2 className="max-w-2xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
             Stay secure and resilient by default
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Build products, not compliance.
-          </p>
+          <p className="mt-4 text-lg text-muted-foreground">Build products, not compliance.</p>
         </motion.div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

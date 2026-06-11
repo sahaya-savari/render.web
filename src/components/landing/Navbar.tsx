@@ -13,8 +13,13 @@ const navLinks = [
 export function RenderLogo({ className = "h-7" }: { className?: string }) {
   return (
     <span className={`flex items-center gap-2 ${className}`}>
-      <svg viewBox="0 0 24 24" className="h-7 w-7 text-white" aria-hidden="true" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H8v-2h3v2zm0-4H8V8h3v4zm5 4h-3v-2h3v2zm0-4h-3V8h3v4z"/>
+      <svg
+        viewBox="0 0 24 24"
+        className="h-7 w-7 text-white"
+        aria-hidden="true"
+        fill="currentColor"
+      >
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H8v-2h3v2zm0-4H8V8h3v4zm5 4h-3v-2h3v2zm0-4h-3V8h3v4z" />
       </svg>
       <span className="font-display text-[22px] font-bold tracking-tight text-white">Render</span>
     </span>
@@ -28,7 +33,12 @@ export function Navbar() {
     <>
       <div className="bg-[#0f1b15] text-[#2ea043] py-2.5 px-4 text-center text-[13px] font-medium flex items-center justify-center gap-4 relative z-50">
         <span>Get started with databases in seconds for free!</span>
-        <a href="#" className="bg-[#2ea043] text-white px-3 py-1 rounded-[4px] font-bold text-[12px] hover:bg-[#3fb950] transition-colors">Try it out</a>
+        <a
+          href="#"
+          className="bg-[#2ea043] text-white px-3 py-1 rounded-[4px] font-bold text-[12px] hover:bg-[#3fb950] transition-colors"
+        >
+          Try it out
+        </a>
       </div>
       <header className="absolute top-[44px] w-full z-50 bg-transparent">
         <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-4 sm:px-6">

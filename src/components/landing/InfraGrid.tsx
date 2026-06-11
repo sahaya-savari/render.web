@@ -81,16 +81,12 @@ export function InfraGrid() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
             >
-              <h3 className="font-display text-[20px] font-bold text-[#e2e8f0]">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-[15px] text-[#8b949e] leading-relaxed">
-                {item.body}
-              </p>
+              <h3 className="font-display text-[20px] font-bold text-[#e2e8f0]">{item.title}</h3>
+              <p className="mt-2 text-[15px] text-[#8b949e] leading-relaxed">{item.body}</p>
             </motion.div>
           ))}
         </div>
-        
+
         <div className="space-y-12">
           {rightColumnItems.map((item, i) => (
             <motion.div
@@ -100,12 +96,8 @@ export function InfraGrid() {
               viewport={{ once: true }}
               transition={{ delay: (i + 1) * 0.05 }}
             >
-              <h3 className="font-display text-[20px] font-bold text-[#e2e8f0]">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-[15px] text-[#8b949e] leading-relaxed">
-                {item.body}
-              </p>
+              <h3 className="font-display text-[20px] font-bold text-[#e2e8f0]">{item.title}</h3>
+              <p className="mt-2 text-[15px] text-[#8b949e] leading-relaxed">{item.body}</p>
             </motion.div>
           ))}
         </div>

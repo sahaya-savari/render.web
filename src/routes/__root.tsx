@@ -74,10 +74,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Render — Cloud Application Platform" },
-      { name: "description", content: "Your fastest path to production. Build, deploy, and scale apps, APIs, and AI agents with zero ops." },
+      {
+        name: "description",
+        content:
+          "Your fastest path to production. Build, deploy, and scale apps, APIs, and AI agents with zero ops.",
+      },
       { name: "author", content: "Render" },
       { property: "og:title", content: "Render — Cloud Application Platform" },
-      { property: "og:description", content: "Build, deploy, and scale apps, APIs, and AI agents with zero ops." },
+      {
+        property: "og:description",
+        content: "Build, deploy, and scale apps, APIs, and AI agents with zero ops.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@render" },

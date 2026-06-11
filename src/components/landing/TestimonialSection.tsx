@@ -25,13 +25,11 @@ export function TestimonialSection() {
           viewport={{ once: true }}
           className="mt-10 font-display text-2xl font-medium leading-relaxed sm:text-3xl"
         >
-          “Render lets us ship AI features at startup speed with a very lean
-          engineering team. It has scaled with every step of our growth — I'm
-          convinced this is what the cloud should feel like.”
+          “Render lets us ship AI features at startup speed with a very lean engineering team. It
+          has scaled with every step of our growth — I'm convinced this is what the cloud should
+          feel like.”
         </motion.blockquote>
-        <p className="mt-6 text-sm text-muted-foreground">
-          Maor Shlomo, Founder of Base44
-        </p>
+        <p className="mt-6 text-sm text-muted-foreground">Maor Shlomo, Founder of Base44</p>
       </div>
     </section>
   );
